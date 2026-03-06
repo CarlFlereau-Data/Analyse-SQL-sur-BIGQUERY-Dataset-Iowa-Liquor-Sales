@@ -1,4 +1,4 @@
-**Analyse-SQL-sur-BigQuery---Iowa_Liquor_Sales**
+# Analyse-SQL-sur-BigQuery---Iowa_Liquor_Sales
 
 Ce projet démontre l’utilisation de SQL sur BigQuery pour analyser un dataset transactionnel volumineux (Iowa Liquor Sales) et explorer les dynamiques du marché des spiritueux dans l’État de l’Iowa aux États-Unis.
 

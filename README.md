@@ -1,132 +1,108 @@
-**Analyse SQL du marché des spiritueux – Iowa Liquor Sales**
+**Analyse-SQL-sur-BigQuery---Iowa_Liquor_Sales**
 
-Contexte du projet : 
-Ce projet présente une analyse exploratoire et stratégique du marché des spiritueux dans l’État de l’Iowa (États-Unis) à partir du dataset public Iowa Liquor Sales, en utilisant SQL sur Google BigQuery. L’objectif est d’illustrer comment des requêtes analytiques permettent d’explorer un marché, d’identifier des tendances de consommation et d’évaluer le positionnement concurrentiel d’un acteur majeur : Pernod Ricard USA. 
+Ce projet démontre l’utilisation de SQL sur BigQuery pour analyser un dataset transactionnel volumineux (Iowa Liquor Sales) et explorer les dynamiques du marché des spiritueux dans l’État de l’Iowa aux États-Unis.
 
-Le dataset couvre l’ensemble des ventes de spiritueux réalisées par les magasins agréés de l’Iowa depuis 2012 et contient des informations détaillées sur les transactions : produits, volumes, fournisseurs, catégories, points de vente et géographie. 
+📊 Analyse du marché des spiritueux et positionnement de Pernod Ricard
 
-Ce projet reproduit une démarche d’analyse de marché telle qu’elle pourrait être menée par une équipe data ou marketing dans le secteur des biens de consommation.
+🎯 Objectif du projet
 
-**Objectifs**
+Ce projet a pour objectif d’analyser les ventes de spiritueux dans l’Iowa afin de comprendre :
 
-L’analyse vise à :
+la structure du marché
 
-Comprendre la dynamique globale du marché des spiritueux dans l’Iowa
+les tendances de consommation
 
-Identifier les tendances de ventes et la saisonnalité du marché
+la saisonnalité des ventes
 
-Analyser les catégories de produits dominantes
+le positionnement concurrentiel de Pernod Ricard USA
 
-Étudier la distribution géographique des ventes
+L’analyse vise également à identifier les catégories de produits dominantes et les zones géographiques les plus dynamiques.
 
-Évaluer la performance commerciale de Pernod Ricard USA
+🧠 Contexte
 
-Mesurer la part de marché et le positionnement concurrentiel
+Dataset utilisé : Iowa Liquor Sales
 
-Analyser le mix produit et la saisonnalité des ventes
+Ce dataset public recense l’ensemble des ventes de spiritueux réalisées dans les magasins agréés de l’État de l’Iowa.
 
-**Dataset**
+Liste des principales variables utilisées :
 
-Source : Google BigQuery Public Dataset
-Nom : Iowa Liquor Sales
+DATE : Date de transaction
+STORE_NAME : Nom du magasin
+CITY : Ville
+VENDOR_NAME : Fournisseur / marque
+CATEGORY_NAME : Catégorie de spiritueux
+ITEM_DESCRIPTION : Nom du produit
+BOTTLES_SOLD : Nombre de bouteilles vendues
+SALE_DOLLARS : Chiffre d’affaires généré
 
-Principales variables utilisées :
+Périmètre étudié : marché des spiritueux dans l’Iowa
 
-Colonne	Description
-date	Date de transaction
-store_name	Nom du magasin
-city	Ville
-vendor_name	Fournisseur
-category_name	Catégorie de spiritueux
-item_description	Nom du produit
-bottles_sold	Nombre de bouteilles vendues
-sale_dollars	Chiffre d’affaires
-Méthodologie
+L’objectif est d’analyser les performances du marché et d’évaluer la position de Pernod Ricard face à ses concurrents.
 
-L’analyse est structurée en 15 requêtes SQL progressives permettant de passer d’une vision macro du marché à une analyse plus stratégique.
+🔬 Axes d’analyse
 
-**1. Analyse globale du marché**
+L’analyse repose sur plusieurs axes :
 
-Évolution du chiffre d’affaires annuel
+Analyse de l’évolution du marché
+Identification des catégories les plus vendues
+Étude de la saisonnalité des ventes
+Analyse géographique des ventes
+Analyse des produits les plus performants
+Étude du positionnement de Pernod Ricard
 
-Analyse de la saisonnalité mensuelle
+⚙️ Méthodologie
+
+1️⃣ Analyse globale du marché
+
+Calcul du chiffre d’affaires total
+Analyse de l’évolution annuelle des ventes
+Identification des tendances saisonnières
+
+2️⃣ Analyse des catégories de produits
 
 Identification des catégories dominantes
+Analyse de la répartition des ventes par catégorie
 
-Analyse géographique des ventes
+3️⃣ Analyse géographique
 
-**2. Focus sur Pernod Ricard USA**
+Identification des villes générant le plus de ventes
+Analyse de la concentration du marché
 
-Évolution du chiffre d’affaires sur les dernières années
+4️⃣ Focus sur Pernod Ricard
 
-Produits les plus vendus
+Analyse du chiffre d’affaires généré
+Identification des produits les plus vendus
+Analyse des villes clés pour la marque
 
-Villes clés pour la marque
+5️⃣ Analyse concurrentielle
 
-Analyse de la saisonnalité spécifique
-
-**3. Analyse concurrentielle**
-
+Comparaison avec les principaux fournisseurs
 Calcul de la part de marché
 
-Positionnement face aux principaux concurrents
+📈 Indicateurs analysés
 
-Analyse de la distribution en magasin
+Chiffre d’affaires total
+Volume de bouteilles vendues
+Part de marché par fournisseur
+Ventes par catégorie de produits
+Ventes par zone géographique
+Saisonnalité des ventes
 
-**4. Analyse du mix produit**
+💡 Apports analytiques
 
-Répartition des ventes par catégorie
+Ce projet démontre :
 
-Analyse du quatrième trimestre (période clé)
+Une capacité à analyser un dataset transactionnel volumineux en SQL
+Une compréhension des dynamiques de marché dans le secteur des spiritueux
+Une capacité à produire des indicateurs business pertinents
+Une maîtrise des requêtes analytiques sur un data warehouse cloud
 
-Identification des catégories stratégiques
+Techniques SQL utilisées :
 
-Techniques SQL utilisées
+GROUP BY
+CTE
+JOIN
+Fonctions de dates
+Calcul de ratios et parts de marché
 
-**Le projet mobilise plusieurs techniques SQL courantes en data analytics :**
-
-Aggregations (SUM, COUNT)
-
-GROUP BY / ORDER BY
-
-CTE (Common Table Expressions)
-
-JOIN / LEFT JOIN
-
-Fonctions de date (EXTRACT, CURRENT_DATE)
-
-Gestion des valeurs nulles (COALESCE)
-
-Calculs de ratios et parts de marché
-
-Filtrage dynamique sur les périodes
-
-Ces requêtes permettent de structurer l’analyse et de reproduire une démarche analytique proche de celle utilisée dans un environnement professionnel.
-
-**Résultats principaux**
-
-L’analyse met en évidence plusieurs éléments :
-
-Une saisonnalité marquée du marché avec des pics de consommation en fin d’année
-
-La domination de certaines catégories comme whisky et vodka
-
-Une forte concentration des ventes dans les grandes villes de l’Iowa
-
-Un positionnement concurrentiel identifiable pour Pernod Ricard face à d’autres fournisseurs majeurs
-
-Des opportunités de développement dans certains points de vente et segments produits
-
-**Compétences démontrées**
-
-Ce projet met en avant plusieurs compétences clés en data analysis :
-
-Analyse de données transactionnelles volumineuses
-
-Utilisation avancée de SQL dans un data warehouse cloud
-
-Construction d’une analyse de marché structurée
-
-Calcul d’indicateurs business (CA, part de marché, saisonnalité)
-
-Structuration d’un projet analytique complet
+Il s’agit d’un cas d’analyse de marché et de business intelligence appliqué au secteur des biens de consommation.
